@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2 data-testid="slackUserName">Tofunmi Adeyinka</h2>
+    </div>
+    <div>
+        <img data-testid="slackDisplayImage" src="https://drive.google.com/uc?export=view&id=1wxGuiwk8ShR3JngNbgbFKEuHN3rzGBlu" alt="Tofunmi Adeyinka">
+    </div>
+    <div>
+        <p data-testid="currentDayOfTheWeek"></p>
+    </div>
+    <div>
+        <p data-testid="currentUTCTime"></p>
+    </div>
+    <div>
+        <p data-testid="myTrack">Track: FrontEnd</p>
+    </div>
+    <div>
+        <a data-testid="githubURL" href="https://github.com/tohmyy/hng-stage1"> Github URL</a>
+    </div>
+    <script>
+const x = new Date();
+
+const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+const enigmaticWeekday = x.getDay();
+
+const mysticDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+mysticDayElement.textContent = `Currnt Day of The Week: ${weekdays[enigmaticWeekday]}`;
+
+const mysticalUTCTime = x.getTime();
+
+const arcaneTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+arcaneTimeElement.textContent = `Current UTC Time: ${mysticalUTCTime} ms`;
+
+    </script>
+</body>
+</html>
